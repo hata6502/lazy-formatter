@@ -1,0 +1,52 @@
+{
+  "name": "lazy-formatter",
+  "version": "0.0.0",
+  "description": "Select the code formatter that makes the smallest file difference.",
+  "keywords": [
+    "code",
+    "formatter",
+    "lazy",
+    "migration"
+  ],
+  "homepage": "https://github.com/hata6502/lazy-formatter#readme",
+  "bugs": {
+    "url": "https://github.com/hata6502/lazy-formatter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hata6502/lazy-formatter.git"
+  },
+  "license": "MIT",
+  "author": "Tomoyuki Hata",
+  "bin": {
+    "lazy-format": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "fix": "prettier --write .",
+    "test": "prettier --check . && tsc --noEmit"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "semantic-release": "^17.4.2",
+    "typescript": "^4.2.4"
+  },
+  "release": {
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "main",
+      "next",
+      "next-major",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ]
+  }
+}

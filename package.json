@@ -28,6 +28,10 @@
     "fix": "prettier --write .",
     "test": "prettier --check . && tsc --noEmit"
   },
+  "dependencies": {
+    "diff": "^5.0.0",
+    "execa": "^5.0.0"
+  },
   "devDependencies": {
     "@types/diff": "^5.0.0",
     "@types/minimatch": "^3.0.4",
@@ -51,9 +55,5 @@
         "prerelease": true
       }
     ]
-  },
-  "dependencies": {
-    "diff": "^5.0.0",
-    "execa": "^5.0.0"
   }
 }

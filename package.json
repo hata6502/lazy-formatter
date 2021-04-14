@@ -34,7 +34,8 @@
   },
   "dependencies": {
     "diff": "^5.0.0",
-    "execa": "^5.0.0"
+    "execa": "^5.0.0",
+    "minimatch": "^3.0.4"
   },
   "devDependencies": {
     "@types/diff": "^5.0.0",

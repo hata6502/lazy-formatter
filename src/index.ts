@@ -10,6 +10,11 @@ interface LazyFormatterJSON {
 }
 
 const main = () => {
+  if (process.argv.length < 3) {
+    console.error("Usage: lazy-format {check | write} [file]...");
+    process.exit(1);
+  }
+
   const mode = process.argv[2];
   const paths = process.argv.slice(3);
 

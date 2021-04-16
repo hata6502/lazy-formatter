@@ -27,11 +27,14 @@ const main = () => {
         return;
       }
 
-      execa.commandSync(`${formatter[1]} ${path}`);
+      let formattedFile;
 
-      const formattedFile = readFileSync(path, "utf8");
-
-      writeFileSync(path, originalFile);
+      try {
+        execa.commandSync(`${formatter[1]} ${path}`);
+        formattedFile = readFileSync(path, "utf8");
+      } finally {
+        writeFileSync(path, originalFile);
+      }
 
       return formattedFile;
     });
